@@ -1,14 +1,19 @@
 {
-  "name": "wilayah-indonesia",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "fuse.js": "^6.4.1"
-  }
+	"name": "wilayah-indonesia",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chatbiz-id/wilayah-indonesia.git"
+	},
+	"author": "chatbiz",
+	"license": "ISC",
+	"dependencies": {
+		"fuse.js": "^6.4.1"
+	},
+	"bugs": {
+		"url": "https://github.com/chatbiz-id/wilayah-indonesia/issues"
+	},
+	"homepage": "https://github.com/chatbiz-id/wilayah-indonesia#readme"
 }
