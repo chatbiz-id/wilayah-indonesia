@@ -1,9 +1,10 @@
 const fs = require('fs');
+const path = require('path');
 const Fuse = require('fuse.js');
 
 const provinsi = function(searchQuery) {
 	return new Promise(function(resolve, reject) {
-		fs.readFile('data/provinsi.json', (err, data) => {
+		fs.readFile(path.join(__dirname, '../data/provinsi.json'), (err, data) => {
 			if (err) reject(err);
 			let dataJSON = JSON.parse(data);
 			const options = {
