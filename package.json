@@ -12,6 +12,15 @@
 	"dependencies": {
 		"fuse.js": "^6.4.1"
 	},
+	"keywords": [
+		"provinsi",
+		"Kota",
+		"Kabupaten",
+		"Kecamatan",
+		"wilayah",
+		"Indonesia",
+		"pencarian wilayah"
+	],
 	"bugs": {
 		"url": "https://github.com/chatbiz-id/wilayah-indonesia/issues"
 	},
