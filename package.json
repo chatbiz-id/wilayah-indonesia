@@ -1,13 +1,13 @@
 {
 	"name": "wilayah-indonesia",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/chatbiz-id/wilayah-indonesia.git"
 	},
-	"author": "chatbiz",
+	"author": "chatbiz.id",
 	"license": "ISC",
 	"dependencies": {
 		"fuse.js": "^6.4.1"
