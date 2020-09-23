@@ -6,8 +6,6 @@ Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan d
 
 `npm i wilayah-indonesia --save`
 
-Then...
-
 ```
 const wilayah = require('wilayah-indonesia');
 
