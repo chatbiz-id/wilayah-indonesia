@@ -1,6 +1,6 @@
 {
 	"name": "wilayah-indonesia",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.",
 	"main": "index.js",
 	"scripts": {
@@ -21,6 +21,7 @@
 		"Kota",
 		"Kabupaten",
 		"Kecamatan",
+		"kelurahan",
 		"wilayah",
 		"Indonesia",
 		"pencarian wilayah"
