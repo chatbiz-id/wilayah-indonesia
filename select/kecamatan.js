@@ -2,57 +2,60 @@ const fs = require('fs');
 const path = require('path');
 const Fuse = require('fuse.js');
 
-const provinsi = function(searchQuery, in_region) {
-	return new Promise(function(resolve, reject) {
+const provinsi = (searchQuery, inRegion) => {
+	return new Promise((resolve, reject) => {
 		fs.readFile(path.join(__dirname, '../data/kecamatan.json'), (err, data) => {
-			if (err) reject(err);
-			let dataJSON = JSON.parse(data);
+			if (err) {
+				reject(err);
+			}
 
-			let options = {
+			const dataJSON = JSON.parse(data);
+
+			const options = {
 				threshold: 0.2,
-				keys: ['kecamatan'],
+				keys: ['kecamatan']
 			};
 
-			if (in_region) {
+			if (inRegion) {
 				let dataWithRegion = dataJSON;
-				if (in_region.provinsi) {
+				if (inRegion.provinsi) {
 					const fuseProvinsi = new Fuse(dataWithRegion, {
 						threshold: 0.2,
-						keys: ['provinsi'],
+						keys: ['provinsi']
 					});
-					const resultProvinsi = fuseProvinsi.search(in_region.provinsi);
+					const resultProvinsi = fuseProvinsi.search(inRegion.provinsi);
 
 					const dataConvertProvinsi = [];
-					resultProvinsi.forEach(el => {
-						dataConvertProvinsi.push(el.item);
+					resultProvinsi.forEach(element => {
+						dataConvertProvinsi.push(element.item);
 					});
 					dataWithRegion = dataConvertProvinsi;
 				}
 
-				if (in_region.kota) {
+				if (inRegion.kota) {
 					const fuseKota = new Fuse(dataWithRegion, {
 						threshold: 0.2,
-						keys: ['kota'],
+						keys: ['kota']
 					});
-					const resultKota = fuseKota.search(in_region.kota);
+					const resultKota = fuseKota.search(inRegion.kota);
 
 					const dataConvertKota = [];
-					resultKota.forEach(el => {
-						dataConvertKota.push(el.item);
+					resultKota.forEach(element => {
+						dataConvertKota.push(element.item);
 					});
 					dataWithRegion = dataConvertKota;
 				}
 
 				const fuseKecamatan = new Fuse(dataWithRegion, {
 					threshold: 0.2,
-					keys: ['kecamatan'],
+					keys: ['kecamatan']
 				});
 
 				const resultKecamatan = fuseKecamatan.search(searchQuery);
 
 				const dataConvertKecamatan = [];
-				resultKecamatan.forEach(el => {
-					dataConvertKecamatan.push(el.item);
+				resultKecamatan.forEach(element => {
+					dataConvertKecamatan.push(element.item);
 				});
 
 				resolve(dataConvertKecamatan);
@@ -62,8 +65,8 @@ const provinsi = function(searchQuery, in_region) {
 				const result = fuse.search(searchQuery);
 
 				const dataConvert = [];
-				result.forEach(el => {
-					dataConvert.push(el.item);
+				result.forEach(element => {
+					dataConvert.push(element.item);
 				});
 
 				resolve(dataConvert);

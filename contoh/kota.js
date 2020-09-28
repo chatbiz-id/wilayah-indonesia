@@ -1,19 +1,19 @@
-const wilayah = require('../index');
+const wilayah = require('..');
 
-// cari = kota: 'KOTA BANDA ACEH', provinsi: 'ACEH'
+// Cari = kota: 'KOTA BANDA ACEH', provinsi: 'ACEH'
 
 // kota atau kabupaten
 const kota = wilayah('AC', 'kota');
 
-kota.then(val => {
-	console.log('Data Kota/Kabupatan: ', val);
+kota.then(value => {
+	console.log('Data Kota/Kabupatan:', value);
 });
 
-// dengan di dalam region
-const kota_in = wilayah('AC', 'kota', {
-	provinsi: 'aceh',
+// Dengan di dalam region
+const kotaIn = wilayah('AC', 'kota', {
+	provinsi: 'aceh'
 });
 
-kota_in.then(val => {
-	console.log('Data Kota/Kabupatan[in]: ', val);
+kotaIn.then(value => {
+	console.log('Data Kota/Kabupatan[in]:', value);
 });

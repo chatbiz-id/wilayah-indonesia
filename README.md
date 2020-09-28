@@ -1,6 +1,6 @@
 # Apa Ini?
 
-[![Build Status](https://travis-ci.com/chatbiz-id/wilayah-indonesia.svg?branch=master)](https://travis-ci.com/chatbiz-id/wilayah-indonesia)
+[![Build Status](https://travis-ci.com/chatbiz-id/wilayah-indonesia.svg?branch=master)](https://travis-ci.com/chatbiz-id/wilayah-indonesia) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.
 

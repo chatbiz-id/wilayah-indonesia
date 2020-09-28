@@ -4,7 +4,7 @@
 	"description": "Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.",
 	"main": "index.js",
 	"scripts": {
-		"test": "nyc ava",
+		"test": "xo & nyc ava",
 		"test:report": "nyc report --reporter=html && ava"
 	},
 	"repository": {

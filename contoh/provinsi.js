@@ -1,9 +1,9 @@
-const wilayah = require('../index');
+const wilayah = require('..');
 
-// cari = provinsi: 'SULAWESI BARAT'
+// Cari = provinsi: 'SULAWESI BARAT'
 
 const provinsi = wilayah('sulawesi', 'provinsi');
 
-provinsi.then(val => {
-	console.log('Data Provinsi: ', val);
+provinsi.then(value => {
+	console.log('Data Provinsi:', value);
 });

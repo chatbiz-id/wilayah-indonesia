@@ -1,28 +1,28 @@
-const wilayah = require('../index');
+const wilayah = require('..');
 
-// cari =  kecamatan: 'Maladum Mes', provinsi: 'PAPUA BARAT', kota: 'KOTA SORONG'
+// Cari =  kecamatan: 'Maladum Mes', provinsi: 'PAPUA BARAT', kota: 'KOTA SORONG'
 
 // kecamatan
 const kecamatan = wilayah('malad', 'kecamatan');
 
-kecamatan.then(val => {
-	console.log('Data kecamatan[MIN]: ', val);
+kecamatan.then(value => {
+	console.log('Data kecamatan[MIN]:', value);
 });
 
-// dengan di dalam region
-const kecamatan_in_1 = wilayah('malad', 'kecamatan', {
+// Dengan di dalam region
+const kecamatanIn1 = wilayah('malad', 'kecamatan', {
+	provinsi: 'papua'
+});
+
+kecamatanIn1.then(value => {
+	console.log('Data kecamatan[in_1]:', value);
+});
+
+const kecamatanIn2 = wilayah('malad', 'kecamatan', {
 	provinsi: 'papua',
+	kota: 'sorong'
 });
 
-kecamatan_in_1.then(val => {
-	console.log('Data kecamatan[in_1]: ', val);
-});
-
-const kecamatan_in_2 = wilayah('malad', 'kecamatan', {
-	provinsi: 'papua',
-	kota: 'sorong',
-});
-
-kecamatan_in_2.then(val => {
-	console.log('Data kecamatan[in_2]: ', val);
+kecamatanIn2.then(value => {
+	console.log('Data kecamatan[in_2]:', value);
 });

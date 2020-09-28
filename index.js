@@ -1,17 +1,17 @@
 const select = require('./select');
 
-module.exports = function(query, type, in_region) {
+module.exports = (query, type, inRegion) => {
 	switch (type) {
 		case 'provinsi':
 			return select.provinsi(query);
 		case 'kota':
-			return select.kota(query, in_region);
+			return select.kota(query, inRegion);
 		case 'kecamatan':
-			return select.kecamatan(query, in_region);
+			return select.kecamatan(query, inRegion);
 		case 'kelurahan':
-			return select.kelurahan(query, in_region);
+			return select.kelurahan(query, inRegion);
 
 		default:
-			return select.kelurahan(query, in_region);
+			return select.kelurahan(query, inRegion);
 	}
 };
