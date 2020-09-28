@@ -1,26 +1,52 @@
 # Apa Ini?
 
+[![Build Status](https://travis-ci.com/chatbiz-id/wilayah-indonesia.svg?branch=master)](https://travis-ci.com/chatbiz-id/wilayah-indonesia)
+
 Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.
 
-# Install
+---
+
+## Daftar Isi
+
+-   [Install](#install)
+-   [Pemakaian](#pemakaian)
+-   [API](#api)
+-   [Referensi](#Referensi)
+
+---
+
+## Install
 
 `npm i wilayah-indonesia --save`
 
+atau
+
+`yarn add wilayah-indonesia`
+
 ```
+
 const wilayah = require('wilayah-indonesia');
+
+
 
 const kecamatan = wilayah('malad', 'kecamatan');
 
+
+
 kecamatan.then(val => {
-	console.log('Data kecamatan: ', val);
+
+console.log('Data kecamatan: ', val);
+
 });
+
 ```
 
-## Opsi
+## Pemakaian
 
 chatbiz-id/wilayah-indonesia menyediakan 2 parameter default :
 
 -   _query_ - _string_
+
 -   _tipe_ - _provinsi | kota | kecamatan | kelurahan_ (Default kelurahan)
 
 ```js
@@ -68,6 +94,7 @@ wilayah('malad', 'kecamatan', {
 ```js
 wilayah('malad', 'kecamatan', {
 	provinsi: 'papua',
+
 	kota: 'sorong',
 });
 ```
@@ -95,10 +122,31 @@ wilayah('malamas', 'kelurahan', {
 ```js
 wilayah('malamas', 'kelurahan', {
 	provinsi: 'papua',
+
 	kota: 'sorong',
+
 	kecamatan: 'segun',
 });
 ```
+
+## API
+
+##### wilayah(query,tipe,di_dalam_region)
+
+Return array of object jika pencarian dapat di temukan
+
+###### query\*
+
+-   Type: `string`
+
+###### tipe\*
+
+-   Type: `string [provinsi | kota | kecamatan | kelurahan]`
+-   Default: `kelurahan`
+
+###### di_dalam_region(optional)
+
+-   Type: `object [provinsi(string) | kota(string) | kecamatan(string)]`
 
 ## Referensi
 
