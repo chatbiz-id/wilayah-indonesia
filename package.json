@@ -3,12 +3,16 @@
 	"version": "1.0.1",
 	"description": "Pencarian wilayah di Indonesia berdasarkan Provinsi, Kota/Kabupaten, Kecamatan dan Kelurahan/Desa.",
 	"main": "index.js",
+	"scripts": {
+		"test": "nyc ava",
+		"test:report": "nyc report --reporter=html && ava"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/chatbiz-id/wilayah-indonesia.git"
 	},
 	"author": "chatbiz.id",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"fuse.js": "^6.4.1"
 	},
@@ -24,5 +28,9 @@
 	"bugs": {
 		"url": "https://github.com/chatbiz-id/wilayah-indonesia/issues"
 	},
-	"homepage": "https://github.com/chatbiz-id/wilayah-indonesia#readme"
+	"homepage": "https://github.com/chatbiz-id/wilayah-indonesia#readme",
+	"devDependencies": {
+		"ava": "^3.13.0",
+		"xo": "^0.33.1"
+	}
 }
